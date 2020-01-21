@@ -103,14 +103,14 @@ class Quizmain extends Component {
 	}
 
 	renderQuiz() {
-		console.log(this.props)
+		console.log(this.props);
 		return (
 			<Quiz
 				answer={this.state.answer}
 				answerOptions={this.state.answerOptions}
 				questionId={this.state.questionId}
 				question={this.state.question}
-				// questionTotal={this.props.quizQuestions.length}
+				questionTotal={this.props.quizQuestions.length}
 				onAnswerSelected={this.handleAnswerSelected}
 			/>
 		);
@@ -124,7 +124,7 @@ class Quizmain extends Component {
 		return (
 			<div className="Quizmain">
 				<div className="Quizmain-header">
-					<h2> Quiz</h2>
+					<h2>Let's check in ...</h2>
 				</div>
 				{this.state.result ? this.renderResult() : this.renderQuiz()}
 			</div>

@@ -11,7 +11,8 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 const Footer = () => {
 	const useStyles = makeStyles({
 		root: {
-			width: 1000
+			width: 700,
+			align: "center"
 		}
 	});
 
