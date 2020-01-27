@@ -30,7 +30,7 @@ const Navigation = () => {
                         <Link to="/about"></Link>
                     </li>
                     <li className="nav-list-item">
-                        <Link to="/dashboard"></Link>
+                        <Link to="/dashboard"></Link> // use the list structure to create buttons for the user to use
                     </li>
                 </ul> */}
 				</Toolbar>

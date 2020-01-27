@@ -1,6 +1,8 @@
 import React from "react";
 import { Switch, Route } from "react-router";
 import Quizmain from './containers/Quizmain'
+import Activitiesmain from './components/ActivitiesComp/Activitiesmain'
+import Landing from './components/LandingPage/Landing'
 // import Home from './containers/Home'
 // import Login from './components/About'
 // import Navigation from './containers/'
@@ -9,9 +11,9 @@ import Quizmain from './containers/Quizmain'
 const Router = () => {
 	return (
 		<Switch>
-			<Route exact path="/" component={Quizmain} />
-			{/* <Route path="/navigation" component={Navigation} /> */}
-			{/* <Route path="//:id" component={} /> */}
+			<Route exact path="/" component={Landing} />
+			<Route path="/activities" component={Activitiesmain} />
+			{/* <Route  */}
 			{/* <Route path="/" component={Quiz} /> */}
 		</Switch>
 	);
