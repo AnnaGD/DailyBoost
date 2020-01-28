@@ -49,8 +49,11 @@ const styles = theme => ({
     position: 'absolute',
     bottom: theme.spacing(4),
   },
+  
   icons: {
-    fontSize: 80
+    fontSize: 80,
+    marginTop: theme.spacing(20),
+    marginBottom: theme.spacing(5)
   }
 });
 
