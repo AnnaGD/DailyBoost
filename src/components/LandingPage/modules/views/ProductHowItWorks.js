@@ -5,6 +5,9 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
+import EmojiFlagsIcon from '@material-ui/icons/EmojiFlags';
+import AccessTimeOutlinedIcon from '@material-ui/icons/AccessTimeOutlined';
+import CreateOutlinedIcon from '@material-ui/icons/CreateOutlined';
 
 const styles = theme => ({
   root: {
@@ -49,6 +52,11 @@ const styles = theme => ({
   button: {
     marginTop: theme.spacing(8),
   },
+  icons: {
+    fontSize: 35,
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+  }
 });
 
 function ProductHowItWorks(props) {
@@ -63,47 +71,39 @@ function ProductHowItWorks(props) {
           alt="curvy lines"
         />
         <Typography variant="h4" marked="center" className={classes.title} component="h2">
-          How it works
+          How are you feeling?
         </Typography>
         <div>
           <Grid container spacing={5}>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
                 <div className={classes.number}>1.</div>
-                <img
-                  src="/static/themes/onepirate/productHowItWorks1.svg"
-                  alt="suitcase"
-                  className={classes.image}
-                />
+                <AccessTimeOutlinedIcon className={classes.icons} fontSize="inherit"/>
                 <Typography variant="h5" align="center">
-                  Appointment every Wednesday 9am.
+                  No matter how busy you are, take a few minutes out of your day to reflect and levelset with yourself.
                 </Typography>
               </div>
             </Grid>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
                 <div className={classes.number}>2.</div>
-                <img
-                  src="/static/themes/onepirate/productHowItWorks2.svg"
-                  alt="graph"
-                  className={classes.image}
-                />
+                <CreateOutlinedIcon className={classes.icons} fontSize="inherit"/>
                 <Typography variant="h5" align="center">
-                  First come, first served. Our offers are in limited quantities, so be quick.
+                Complete a 5 question assessment to target your emotional state.
                 </Typography>
               </div>
             </Grid>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
                 <div className={classes.number}>3.</div>
-                <img
+                <EmojiFlagsIcon className={classes.icons} fontSize="inherit"/>
+                {/* <img
                   src="/static/themes/onepirate/productHowItWorks3.svg"
                   alt="clock"
                   className={classes.image}
-                />
+                /> */}
                 <Typography variant="h5" align="center">
-                  {'New offers every week. New experiences, new surprises. '}
-                  {'Your Sundays will no longer be alike.'}
+                  {'And Finally! Create a daily ritual for your emotional health by stepping out and exploring what your local community has to offer. '}
                 </Typography>
               </div>
             </Grid>
@@ -115,9 +115,9 @@ function ProductHowItWorks(props) {
           variant="contained"
           className={classes.button}
           component="a"
-          href="/premium-themes/onepirate/sign-up/"
+          onClick={() => props.takeQuiz()}
         >
-          Get started
+          Quiz
         </Button>
       </Container>
     </section>

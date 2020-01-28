@@ -11,3 +11,10 @@ export const logout = () => {
 		value: "Guest"
 	};
 };
+
+export const takeQuiz = () => {
+	return {
+		type: "TAKEQUIZ",
+		value: true
+	}
+}

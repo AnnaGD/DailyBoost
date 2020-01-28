@@ -22,6 +22,15 @@ const currentUser = (state = null, action) => {
 	}
 };
 
+const quizReady = (state = false, action) => {
+	switch (action.type) {
+		case "TAKEQUIZ":		
+			return action.value
+		default:
+			return state;
+	}
+}
+
 const quizQuestions = (state = [], action) => {
 	switch (action.type) {
 		default:
@@ -30,6 +39,7 @@ const quizQuestions = (state = [], action) => {
 };
 
 export default combineReducers({
+	quizReady,
 	quizQuestions,
 	currentUser
 });

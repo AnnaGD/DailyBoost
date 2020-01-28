@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+//import icons
+import EmojiObjectsOutlinedIcon from '@material-ui/icons/EmojiObjectsOutlined';
 
 const styles = theme => ({
   root: {
@@ -21,7 +23,7 @@ const styles = theme => ({
     marginBottom: theme.spacing(14),
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   backdrop: {
     position: 'absolute',
@@ -47,39 +49,37 @@ const styles = theme => ({
     position: 'absolute',
     bottom: theme.spacing(4),
   },
+  icons: {
+    fontSize: 80
+  }
 });
 
-function ProductHeroLayout(props) {
+function InspirationalQuoteLayout(props) {
   const { backgroundClassName, children, classes } = props;
 
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <img
-          src="/static/themes/onepirate/productHeroWonder.png"
-          alt="wonder"
-          width="147"
-          height="80"
-        />
+      <EmojiObjectsOutlinedIcon className={classes.icons} fontSize="inherit"/>
         {children}
         <div className={classes.backdrop} />
         <div className={clsx(classes.background, backgroundClassName)} />
-        <img
+        {/* <img
           className={classes.arrowDown}
           src="/static/themes/onepirate/productHeroArrowDown.png"
           height="16"
           width="12"
           alt="arrow down"
-        />
+        /> */}
       </Container>
     </section>
   );
 }
 
-ProductHeroLayout.propTypes = {
+InspirationalQuoteLayout.propTypes = {
   backgroundClassName: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProductHeroLayout);
+export default withStyles(styles)(InspirationalQuoteLayout);
