@@ -98,7 +98,10 @@ class Quizmain extends Component {
 		if (result.length === 1) {
 			this.setState({ result: result[0] });
 		} else {
-			this.setState({ result: "Undetermined" });
+			this.setState({
+				result:
+					"You should look into if any social events are hapenning tonight, it's never too late to learn how to two-step!!"
+			});
 		}
 	}
 

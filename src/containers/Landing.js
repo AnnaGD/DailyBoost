@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Quizmain from '../components/Quizmain';
+import Landing from '../components/LandingPage/Landing';
 import { takeQuiz } from '../redux/actions';
 
 const mapStateToProps = ( state ) => {
@@ -17,4 +17,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Quizmain);
+export default connect(mapStateToProps, mapDispatchToProps)(Landing);

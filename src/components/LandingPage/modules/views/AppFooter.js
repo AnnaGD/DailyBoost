@@ -9,11 +9,11 @@ import TextField from '../components/TextField';
 function Copyright() {
   return (
     <React.Fragment>
-      {'© '}
+      {/* {'© '}
       <Link color="inherit" href="https://material-ui.com/">
         Your Website
       </Link>{' '}
-      {new Date().getFullYear()}
+      {new Date().getFullYear()} */}
     </React.Fragment>
   );
 }
@@ -88,12 +88,12 @@ export default function AppFooter() {
               spacing={2}
             >
               <Grid item className={classes.icons}>
-                <a href="https://material-ui.com/" className={classes.icon}>
+                {/* <a href="https://material-ui.com/" className={classes.icon}>
                   <img src="/static/themes/onepirate/appFooterFacebook.png" alt="Facebook" />
                 </a>
                 <a href="https://twitter.com/MaterialUI" className={classes.icon}>
                   <img src="/static/themes/onepirate/appFooterTwitter.png" alt="Twitter" />
-                </a>
+                </a> */}
               </Grid>
               <Grid item>
                 <Copyright />

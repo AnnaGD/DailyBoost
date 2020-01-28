@@ -36,8 +36,8 @@ function InspirationalQuote(props) {
     <InspirationalQuoteLayout backgroundClassName={classes.background}>
       {/* Increase the network loading priority of the background image. */}
       <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
-      <Typography color="inherit" align="center" variant="h4" marked="center">
-        Insipirational Quote goes here
+      <Typography color="inherit" align="center" variant="h4" paragraph={true}>
+      "Working hard for something we don't care about is called stressed; working hard for something we love is called passion." -Simon Sinek
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
         {/* Enjoy secret offers up to -70% off the best luxury hotels every Sunday. */}
