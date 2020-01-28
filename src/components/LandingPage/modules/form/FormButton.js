@@ -13,4 +13,4 @@ FormButton.propTypes = {
   mounted: PropTypes.bool,
 };
 
-export default defer(FormButton);
+export default FormButton;

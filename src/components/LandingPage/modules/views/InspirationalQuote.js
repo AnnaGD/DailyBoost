@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
-import ProductHeroLayout from './ProductHeroLayout';
+import InspirationalQuoteLayout from './InspirationalQuoteLayout';
 
 const backgroundImage =
-  'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
+  'https://images.unsplash.com/photo-1460411794035-42aac080490a?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80';
 
 const styles = theme => ({
   background: {
@@ -29,20 +29,20 @@ const styles = theme => ({
   },
 });
 
-function ProductHero(props) {
+function InspirationalQuote(props) {
   const { classes } = props;
 
   return (
-    <ProductHeroLayout backgroundClassName={classes.background}>
+    <InspirationalQuoteLayout backgroundClassName={classes.background}>
       {/* Increase the network loading priority of the background image. */}
       <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
-      <Typography color="inherit" align="center" variant="h2" marked="center">
-        Upgrade your Sundays
+      <Typography color="inherit" align="center" variant="h4" marked="center">
+        Insipirational Quote goes here
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-        Enjoy secret offers up to -70% off the best luxury hotels every Sunday.
+        {/* Enjoy secret offers up to -70% off the best luxury hotels every Sunday. */}
       </Typography>
-      <Button
+      {/* <Button
         color="secondary"
         variant="contained"
         size="large"
@@ -51,16 +51,16 @@ function ProductHero(props) {
         href="/premium-themes/onepirate/sign-up/"
       >
         Register
-      </Button>
+      </Button> */}
       <Typography variant="body2" color="inherit" className={classes.more}>
-        Discover the experience
+        {/* Discover the experience */}
       </Typography>
-    </ProductHeroLayout>
+    </InspirationalQuoteLayout>
   );
 }
 
-ProductHero.propTypes = {
+InspirationalQuote.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProductHero);
+export default withStyles(styles)(InspirationalQuote);

@@ -5,10 +5,12 @@ import { withStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
+import Button from '@material-ui/core/Button'
 
 const styles = theme => ({
   title: {
     fontSize: 24,
+    marginRight: '60%'
   },
   placeholder: toolbarStyles(theme).root,
   toolbar: {
@@ -48,29 +50,45 @@ function AppAppBar(props) {
             underline="none"
             color="inherit"
             className={classes.title}
-            href="/premium-themes/onepirate/"
+            href="/"
           >
-            {'onepirate'}
+            {'dailyBOOST'}
           </Link>
-          <div className={classes.right}>
+          {/* <div className={classes.right}>
             <Link
               color="inherit"
               variant="h6"
               underline="none"
               className={classes.rightLink}
-              href="/premium-themes/onepirate/sign-in/"
+              href="/signin"
             >
               {'Sign In'}
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               variant="h6"
               underline="none"
               className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/premium-themes/onepirate/sign-up/"
+              href="/premium-themes/onepirate/sign-in/"
             >
               {'Sign Up'}
-            </Link>
-          </div>
+            </Link> */}
+            <Button
+                className={classes.rightLink}
+                href="/signin"
+                variant="text"
+                size="medium"
+                >
+                Sign In
+            </Button>
+            <Button
+              className={clsx(classes.rightLink, classes.linkSecondary)}
+              href="/signup"
+              variant="text"
+              size="medium"
+              >
+              Sign Up
+            </Button>
+          {/* </div> */}
         </Toolbar>
       </AppBar>
       <div className={classes.placeholder} />
