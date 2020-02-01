@@ -137,7 +137,7 @@ class Quizmain extends Component {
 		return (
 			<div className="Quizmain">
 				<div className="Quizmain-header">
-					<h2>Let's check in ...</h2>
+					<h3>Let's check in ...</h3>
 				</div>
 				{this.state.result ? this.renderResult() : this.renderQuiz()}
 				{this.state.result && this.showActivities}

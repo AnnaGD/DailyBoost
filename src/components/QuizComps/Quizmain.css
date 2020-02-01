@@ -60,7 +60,9 @@ body {
 
 /* Result Component */
 .result {
-	padding: 1.5rem 2.5rem;
+	padding: 2rem 2.5rem;
+	font-size: 20px;
+	
 }
 
 /* Quiz Component */
@@ -68,6 +70,7 @@ body {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	font-size: 20px;
 }
 
 /* QuestionCount Component */
@@ -84,6 +87,7 @@ body {
 
 /* AnswerOption Component */
 .answerOption {
+	font-size: 20px;
 	border-top: 1px solid #eee;
 }
 
@@ -109,7 +113,7 @@ body {
 	width: 100%;
 	margin: 0;
 	padding: 1.5rem 2.5rem 1.5rem 5rem;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 1.5;
 }
 
