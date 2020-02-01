@@ -1,15 +1,33 @@
-// const express = require express ()
+const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
 
-const clients = require ('./client')
-const test = require
+//require routes here
+// const clientsRouter = require("./routers/clientsRouter");
 
-const app = express ()
-const port = process.env.PORT
+//calling middleware to log network activity
+// const { logger } = require('./middleware');
 
-app.user(bodyParser.json())
-app.user
+//using express()
+const app = express();
+const port = process.env.PORT || 5000;
 
-app.get('/',(req,res) => {
-    console.log('server is connected')
-    
+//use json format and logger middleware
+app.use(bodyParser.json());
+
+//eventually I will have a logger here to keep track of network activity
+// app.use(logger);
+
+//app.use( all api routes) here
+// app.use("/api", clientsRouter);
+
+app.use(express.static(path.join(__dirname, "../build")));
+
+app.get("*", function(req, res) {
+  console.log("you got it bro XD");
+  res.sendFile(path.join(__dirname, "../build", "index.html"));
+});
+
+app.listen(port, () => {
+  console.log(`Web server is listening on port ${port} :D`);
 });
