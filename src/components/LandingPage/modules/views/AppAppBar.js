@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button'
 
 const styles = theme => ({
   title: {
-    fontSize: 24,
+    fontSize: 34,
     marginRight: '60%'
   },
   placeholder: toolbarStyles(theme).root,
