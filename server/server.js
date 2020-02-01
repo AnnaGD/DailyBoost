@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 
 //require routes here
-// const clientsRouter = require("./routers/clientsRouter");
+const historyRouter = require("./routers/historyRouter");
 
 //calling middleware to log network activity
 // const { logger } = require('./middleware');
@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 // app.use(logger);
 
 //app.use( all api routes) here
-// app.use("/api", clientsRouter);
+app.use("/api", historyRouter);
 
 app.use(express.static(path.join(__dirname, "../build")));
 

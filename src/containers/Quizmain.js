@@ -1,17 +1,19 @@
 import { connect } from 'react-redux';
 import Quizmain from '../components/Quizmain';
-// import { login, logout } from '../redux/actions';
+import { quizComplete, quizResult, toggleHistory } from '../redux/actions';
 
 const mapStateToProps = ( state ) => {
     return {
-        quizQuestions: state.quizQuestions
+        quizQuestions: state.quizQuestions,
+        quizResult: state.quizResult
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        // login: () => dispatch(login()),
-        // logout: () => dispatch(logout())
+        // quizComplete: () => dispatch(quizComplete()),
+        quizResult: (result) => dispatch(quizResult(result)),
+        toggleHistory: () => dispatch(toggleHistory())
     }
 }
 

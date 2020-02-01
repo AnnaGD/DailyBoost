@@ -10,20 +10,19 @@ import ProductHowItWorks from './modules/views/ProductHowItWorks';
 import ProductCTA from './modules/views/ProductCTA';
 import AppAppBar from './modules/views/AppAppBar';
 import Quizmain from '../../containers/Quizmain';
+import History from './modules/views/History';
 
 
 function Landing( props ) {
-  debugger
+  // debugger
   return (
     <React.Fragment>
       <AppAppBar />
       <InspirationalQuote />
       <ProductHowItWorks takeQuiz={() => props.takeQuiz()} />
-      {props.quizReady && 
-      <>
-        <Quizmain quizQuestions={props.quizQuestions}/> 
-        <Activities />
-      </>  }
+      {props.quizReady && <Quizmain quizQuestions={props.quizQuestions}/>}
+          {props.showHistory && <History history={props.history} fetchHistory={() => props.fetchHistory()} />} 
+          {props.quizResult && <Activities />}
       {/* <ProductCTA /> */}
       {/* <ProductSmokingHero /> */}
       <AppFooter />

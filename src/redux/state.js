@@ -6,6 +6,12 @@ export default {
 
 	quizReady: false,
 
+	history: [],
+
+	showHistory: false,
+
+	quizResult: null,
+
 	quizQuestions: [
 		{
 			question: "How are you feeling right now?",

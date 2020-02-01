@@ -3,6 +3,7 @@ import Quiz from "./QuizComps/Quiz";
 import Result from "./QuizComps/Result";
 // import logo from "./logo.svg";
 import "./QuizComps/Quizmain.css";
+import Button from '@material-ui/core/Button';
 
 //Define our initial state in the App class’s constructor function.
 
@@ -98,10 +99,13 @@ class Quizmain extends Component {
 		if (result.length === 1) {
 			this.setState({ result: result[0] });
 		} else {
+			this.props.quizResult(result)
+			debugger
 			this.setState({
 				result:
 					"You should look into if any social events are hapenning tonight, it's never too late to learn how to two-step!!"
 			});
+			// this.props.quizComplete()
 		}
 	}
 
@@ -123,6 +127,11 @@ class Quizmain extends Component {
 		return <Result quizResult={this.state.result} />;
 	}
 
+	showActivities(){
+		debugger
+		return this.props.quizComplete
+	}
+
 	render() {
 		return (
 			<div className="Quizmain">
@@ -130,6 +139,8 @@ class Quizmain extends Component {
 					<h2>Let's check in ...</h2>
 				</div>
 				{this.state.result ? this.renderResult() : this.renderQuiz()}
+				{this.state.result && <Button onClick={() => this.props.toggleHistory()}>Show History</Button>}
+				{this.state.result && this.showActivities}
 			</div>
 		);
 	}

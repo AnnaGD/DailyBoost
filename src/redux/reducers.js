@@ -38,8 +38,51 @@ const quizQuestions = (state = [], action) => {
 	}
 };
 
+const toggleHistory = (state = false, action) => {
+	switch (action.type) {
+		case "TOGGLE_HISTORY":
+			return action.value
+		default:
+			return state;
+	}
+};
+
+const history = (state = [], action) => {
+    switch(action.type) {
+        case 'FETCH_HISTORY':
+            return action.value
+        case 'ADD_HISTORY':
+            return [ ...state, action.value ]
+        default:
+            return state
+    }
+}
+
+const quizComplete = (state = false, action) => {
+	switch(action.type) {
+		case 'QUIZ_RESULT':
+			return true
+		default:
+			return state
+	}
+}
+
+const quizResult = (state= '', action) => {
+	switch(action.type) {
+		case 'QUIZ_RESULT':
+		debugger
+			return action.value
+		default:
+			return state
+	}
+}
+
 export default combineReducers({
 	quizReady,
 	quizQuestions,
-	currentUser
+	currentUser,
+	history,
+	toggleHistory,
+	quizComplete,
+	quizResult
 });
