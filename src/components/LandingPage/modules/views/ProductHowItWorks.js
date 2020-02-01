@@ -33,7 +33,7 @@ const styles = theme => ({
     marginBottom: theme.spacing(14),
   },
   number: {
-    fontSize: 24,
+    fontSize: 34,
     fontFamily: theme.typography.fontFamily,
     color: theme.palette.secondary.main,
     fontWeight: theme.typography.fontWeightMedium,
@@ -53,7 +53,7 @@ const styles = theme => ({
     marginTop: theme.spacing(8),
   },
   icons: {
-    fontSize: 35,
+    fontSize: 45,
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
   }

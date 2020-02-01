@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
+import Button from '@material-ui/core/Button';
+import History from './History'
 
 const styles = theme => ({
   root: {
@@ -144,6 +146,7 @@ function Activities(props) {
   ];
 
   return (
+    <>
     <Container className={classes.root} component="section">
       <Typography variant="h4" marked="center" align="center" component="h2">
         Explore Local Meet-Up
@@ -179,6 +182,9 @@ function Activities(props) {
         ))}
       </div>
     </Container>
+    {<Button onClick={() => props.toggleHistory()}>Show History</Button>}
+    {props.showHistory && <History fetchHistory={() => props.fetchHistory()}/>}
+    </>
   );
 }
 

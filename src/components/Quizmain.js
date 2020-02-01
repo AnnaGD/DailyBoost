@@ -4,6 +4,7 @@ import Result from "./QuizComps/Result";
 // import logo from "./logo.svg";
 import "./QuizComps/Quizmain.css";
 import Button from '@material-ui/core/Button';
+import Activities from '../containers/Activities';
 
 //Define our initial state in the App class’s constructor function.
 
@@ -18,7 +19,7 @@ class Quizmain extends Component {
 			answerOptions: [],
 			answer: "",
 			answersCount: {},
-			result: ""
+			result: null
 		};
 
 		this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -139,8 +140,8 @@ class Quizmain extends Component {
 					<h2>Let's check in ...</h2>
 				</div>
 				{this.state.result ? this.renderResult() : this.renderQuiz()}
-				{this.state.result && <Button onClick={() => this.props.toggleHistory()}>Show History</Button>}
 				{this.state.result && this.showActivities}
+				{this.state.result && <Activities />}
 			</div>
 		);
 	}
